@@ -28,6 +28,8 @@ BATCH_SIZE = 8
 # Learning rate
 LR = 0.0001
 
-data = VideoDataset('D:\\video_data_loader\\data\\milkBottleActions', batch_size=BATCH_SIZE, sample_length=MODEL_INPUT_SIZE)
+data = VideoDataset('D:\\video_data_loader\\data\\EmotiW', batch_size=BATCH_SIZE, sample_length=MODEL_INPUT_SIZE, train_pct=1.0, video_ext='mp4')
 
 print(data)
+
+x = next(enumerate(data.train_dl))
